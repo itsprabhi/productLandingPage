@@ -275,6 +275,7 @@ section{
     top: 15vh;
     right: 0;
     transform: scale(1.2) rotate(10deg);
+    width: 35vw;
 }
 .img2{
     position: absolute;
@@ -285,4 +286,31 @@ section{
     0% {transform: translateY(0)}
     50% {transform: translateY(20px)}
     100% {transform: translateY(0px)}
+}
+
+@media screen and (max-width:900px){
+    .anime-box2,.site-intro-img{
+        display: none;
+    }
+    .site-intro > div{
+        width:100%;
+    }
+    .anime-box1{
+        width: 100%;
+        right: 0;
+    }
+    .about-sec{
+        display: block;
+    }
+    .about-sec > div {
+        height: 50vh;
+        width: 100%;
+    }
+    .about-sec-txt p,.vid-content p{
+        font-size: 18px;
+    }
+    .site-intro-text h1{
+        font-size: 65px;
+        margin: 50px auto;
+    }
 }
