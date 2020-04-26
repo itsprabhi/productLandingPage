@@ -313,4 +313,14 @@ section{
         font-size: 65px;
         margin: 50px auto;
     }
+    .anime-box1-slide1{
+        width:100%;
+        right: 0;
+    }
+    .about-sec-options{
+        display: block;
+    }
+    .about-sec-options .btn{
+        margin: 5px auto;
+    }
 }
