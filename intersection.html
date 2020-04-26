@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            scroll-snap-type: y proximity;
+            overflow-y: scroll;
+        }
+        body > div {
+            scroll-snap-align: center;
+        }
+        .section{
+            width: 100%;
+            height: 100vh;
+        }
+        .section1{
+            background: rgb(0, 0, 0);
+        }
+        .section2{
+            background: rgb(80, 80, 80);
+        }
+        .section3{
+            background: rgb(177, 177, 182);
+        }
+    </style>
+</head>
+<body>
+    <div class = 'section section1'></div>
+    <div class = 'section section2'></div>
+    <div class = 'section section3'></div>
+    <script>
+        const sectionTwo = document.querySelector('.section2')
+
+        const options = {};
+
+        const observer = new IntersectionObserver((entries,observer) => {
+            entries.forEach(entry => {
+                if(entry.intersectionRatio > 0){
+                    console.log(entry)
+                    
+                }else{
+                    return
+                }
+            })
+        },options);
+
+        observer.observe(sectionTwo)
+        
+    </script>
+</body>
+</html>
